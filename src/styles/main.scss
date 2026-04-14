@@ -2,6 +2,16 @@
 @use './variables';
 
 body {
-  margin: 0;
-  background-color: beige;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
 }
