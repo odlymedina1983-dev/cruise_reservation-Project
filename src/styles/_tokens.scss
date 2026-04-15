@@ -1,0 +1,202 @@
+
+/* =========================================================
+   TOKENS OPTIMIZADOS
+   Fuente: export de Figma depurado para uso real en SCSS
+   ========================================================= */
+$font-family-heading: 'Century Gothic', 'Arial', sans-serif;
+$font-family-body: 'Inter', sans-serif;
+$font-family-accent: 'Fantasm-and-Secrets', cursive;
+/* -------------------------
+   COLORS — SEMANTIC
+------------------------- */
+$color-bg-base: #ffffff;
+$color-bg-surface: #f5f7fa;
+$color-bg-brand: #051c3b;
+
+$color-text-primary: #6b7280;
+$color-text-secondary: #c2c6cc;
+$color-text-strong: #1a1a1a;
+$color-text-inverse: #ffffff;
+$color-text-muted: #e5e7eb;
+
+$color-action-primary: #2ec4b6;
+$color-action-accent: #ff7a59;
+
+$color-border-subtle: #e5e7eb;
+
+$color-state-success: #44c7ba;
+$color-state-error: #ff876f;
+$color-state-hover: #b0e7e1;
+$color-state-pressed: #44c7ba;
+$color-state-disabled: #c2c6cc;
+
+/* -------------------------
+   COLORS — PRIMITIVES
+   Útiles si luego quieres variantes
+------------------------- */
+$navy-100: #e6ecf5;
+$navy-200: #b3c2d6;
+$navy-300: #8099b8;
+$navy-400: #4d7099;
+$navy-500: #051c3b;
+
+$turquoise-100: #e6f7f5;
+$turquoise-200: #b0e7e1;
+$turquoise-300: #7ad7cd;
+$turquoise-400: #44c7ba;
+$turquoise-500: #2ec4b6;
+
+$coral-100: #ffede7;
+$coral-200: #ffcbbf;
+$coral-300: #ffa997;
+$coral-400: #ff876f;
+$coral-500: #ff7a59;
+
+$gray-100: #f5f7fa;
+$gray-200: #e5e7eb;
+$gray-300: #c2c6cc;
+$gray-400: #6b7280;
+$gray-500: #1a1a1a;
+
+$white: #ffffff;
+
+/* -------------------------
+   SPACING
+   Ojo: corregidos a px
+------------------------- */
+$spc-4: 4px;
+$spc-6: 6px;
+$spc-8: 8px;
+$spc-10: 10px;
+$spc-12: 12px;
+$spc-16: 16px;
+$spc-20: 20px;
+$spc-24: 24px;
+$spc-32: 32px;
+$spc-64: 64px;
+$spc-80: 80px;
+
+/* -------------------------
+   RADIUS
+   Ojo: corregidos a px
+------------------------- */
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-full: 999px;
+
+/* -------------------------
+   TYPOGRAPHY — FAMILIES
+------------------------- */
+$font-family-heading: 'Century Gothic', sans-serif;
+$font-family-body: 'Inter', sans-serif;
+$font-family-accent: 'Fantasm and Secrets', cursive;
+
+/* -------------------------
+   TYPOGRAPHY — WEIGHTS
+------------------------- */
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+/* -------------------------
+   TYPOGRAPHY — SIZES
+------------------------- */
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-20: 20px;
+$font-size-24: 24px;
+$font-size-36: 36px;
+$font-size-48: 48px;
+$font-size-56: 56px;
+$font-size-64: 64px;
+
+/* -------------------------
+   TYPOGRAPHY — LINE HEIGHTS
+------------------------- */
+$line-height-small: 21px;
+$line-height-body: 26px;
+$line-height-h2: 44px;
+$line-height-h1: 68px;
+
+$line-height-accent-sm: 26px;
+$line-height-accent-md: 40px;
+$line-height-accent-lg: 53px;
+
+/* -------------------------
+   TYPOGRAPHY — READY TOKENS
+   Esto es lo práctico para usar
+------------------------- */
+$text-heading-h1-family: $font-family-heading;
+$text-heading-h1-size: $font-size-56;
+$text-heading-h1-line-height: $line-height-h1;
+$text-heading-h1-weight: $font-weight-bold;
+$text-heading-h1-letter-spacing: -0.56px;
+
+$text-heading-h2-family: $font-family-heading;
+$text-heading-h2-size: $font-size-36;
+$text-heading-h2-line-height: $line-height-h2;
+$text-heading-h2-weight: $font-weight-bold;
+$text-heading-h2-letter-spacing: -0.18px;
+
+$text-heading-h3-family: $font-family-heading;
+$text-heading-h3-size: $font-size-20;
+$text-heading-h3-line-height: $line-height-body;
+$text-heading-h3-weight: $font-weight-bold;
+$text-heading-h3-letter-spacing: 0;
+
+$text-body-regular-family: $font-family-body;
+$text-body-regular-size: $font-size-16;
+$text-body-regular-line-height: $line-height-body;
+$text-body-regular-weight: $font-weight-regular;
+$text-body-regular-letter-spacing: 0;
+
+$text-body-small-family: $font-family-body;
+$text-body-small-size: $font-size-14;
+$text-body-small-line-height: $line-height-small;
+$text-body-small-weight: $font-weight-regular;
+$text-body-small-letter-spacing: 0;
+
+$text-accent-lg-family: $font-family-accent;
+$text-accent-lg-size: $font-size-48;
+$text-accent-lg-line-height: $line-height-accent-lg;
+$text-accent-lg-weight: $font-weight-regular;
+$text-accent-lg-letter-spacing: 0;
+
+$text-accent-md-family: $font-family-accent;
+$text-accent-md-size: $font-size-36;
+$text-accent-md-line-height: $line-height-accent-md;
+$text-accent-md-weight: $font-weight-regular;
+$text-accent-md-letter-spacing: 0;
+
+$text-accent-sm-family: $font-family-accent;
+$text-accent-sm-size: $font-size-24;
+$text-accent-sm-line-height: $line-height-accent-sm;
+$text-accent-sm-weight: $font-weight-regular;
+$text-accent-sm-letter-spacing: 0;
+
+/* -------------------------
+   LAYOUT
+------------------------- */
+$container-padding-mobile: 16px;
+$container-padding-tablet: 32px;
+$container-padding-desktop: 120px;
+
+$grid-columns-mobile: 4;
+$grid-columns-tablet: 8;
+$grid-columns-desktop: 12;
+
+$grid-gutter-mobile: 16px;
+$grid-gutter-tablet: 24px;
+$grid-gutter-desktop: 32px;
+
+/* -------------------------
+   BREAKPOINTS
+   Ajustables luego si decides otros
+------------------------- */
+$bp-mobile: 375px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-desktop-lg: 1440px;

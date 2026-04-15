@@ -1,17 +1,39 @@
+@use './tokens' as *;
 @use './reset';
-@use './variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Fantasm-and-Secrets';
+  src: url('../assets/fonts/Fantasm-and-Secrets.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  font-family: Georgia, 'Times New Roman', serif;
+  background-color: $color-bg-base;
+  color: $color-text-primary;
+  font-family: $font-family-body;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 #root {
   min-height: 100vh;
 }
+
 .container {
-  max-width: var(--container-width);
+  width: 100%;
   margin: 0 auto;
-  padding: 0 var(--container-padding);
+  padding-inline: 16px;
+}
+h1 {
+  font-family: 'Fantasm and Secrets';
+}
+h2{
+  font-family: $font-family-heading;
+}
+h3{
+  font-family: $font-family-body;
 }
