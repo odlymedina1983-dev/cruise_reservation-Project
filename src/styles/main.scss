@@ -1,6 +1,10 @@
 @use './tokens' as *;
 @use './reset';
 @use './components/CTA';
+@use './components/MenuButton';
+@use './components/SocialBar';
+@use './components/UserBar';
+@use './components/LinkDrawer';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -13,7 +17,7 @@
 }
 
 body {
-  background-color: $color-bg-base;
+  background-color: $navy-200;
   color: $color-text-primary;
   font-family: $font-family-body;
   font-size: 16px;

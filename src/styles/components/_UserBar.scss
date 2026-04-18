@@ -1,0 +1,112 @@
+@use '../tokens' as *;
+
+.user-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 22px;
+  width: fit-content;
+}
+
+/* grupo principal */
+.user-bar__left {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* avatar */
+.user-bar__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #ff7a59;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* texto principal */
+.user-bar__primary {
+  font-family: $font-family-heading;
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 130%;
+  letter-spacing: 0;
+  white-space: nowrap;
+  color: #ff7a59;
+}
+
+/* texto secundario */
+.user-bar__secondary {
+  font-family: $font-family-heading;
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 130%;
+  letter-spacing: 0;
+  color: #ffffff;
+  white-space: pre-line;
+}
+
+/* contenedor derecho */
+.user-bar__right {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 0;
+  overflow: hidden;
+}
+
+/* email */
+.user-bar__email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #2ec4b6;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* estado logged */
+.user-bar--logged {
+  min-height: 26px;
+  gap: 8px;
+
+  .user-bar__left {
+    gap: 8px;
+  }
+
+  .user-bar__avatar {
+    color: #2ec4b6;
+  }
+
+  .user-bar__primary {
+    color: #ff7a59;
+  }
+
+  .user-bar__secondary {
+    color: #2ec4b6;
+  }
+
+  .user-bar__right {
+    width: 20px;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,103 @@
+@use '../tokens' as *;
+
+.social-bar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.social-bar__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  line-height: 0;
+}
+
+.social-bar__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.social-bar__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* sizes */
+.social-bar--mobile {
+  width: 110.06px;
+  min-height: 16px;
+}
+
+.social-bar--desktop {
+  width: 139px;
+  min-height: 24px;
+}
+
+.social-bar--mobile .social-bar__link {
+  height: 16px;
+}
+
+.social-bar--desktop .social-bar__link {
+  height: 24px;
+}
+
+/* icon sizes */
+.social-bar--mobile .social-bar__icon--youtube,
+.social-bar--mobile .social-bar__icon {
+  height: 16px;
+}
+
+.social-bar--desktop .social-bar__icon {
+  height: 24px;
+}
+
+/* per icon width: mobile */
+.social-bar--mobile .social-bar__link:nth-child(1) .social-bar__icon {
+  width: 23px;
+}
+
+.social-bar--mobile .social-bar__link:nth-child(2) .social-bar__icon {
+  width: 16px;
+}
+
+.social-bar--mobile .social-bar__link:nth-child(3) .social-bar__icon {
+  width: 9px;
+}
+
+.social-bar--mobile .social-bar__link:nth-child(4) .social-bar__icon {
+  width: 15px;
+}
+
+/* per icon width: desktop scaled from figma height 24 */
+.social-bar--desktop .social-bar__link:nth-child(1) .social-bar__icon {
+  width: 34.5px;
+}
+
+.social-bar--desktop .social-bar__link:nth-child(2) .social-bar__icon {
+  width: 24px;
+}
+
+.social-bar--desktop .social-bar__link:nth-child(3) .social-bar__icon {
+  width: 13.5px;
+}
+
+.social-bar--desktop .social-bar__link:nth-child(4) .social-bar__icon {
+  width: 22.5px;
+}
+
+/* colors */
+.social-bar--white {
+  color: #ffffff;
+}
+
+.social-bar--brand {
+  color: #051c3b;
+}

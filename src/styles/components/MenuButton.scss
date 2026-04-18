@@ -1,0 +1,60 @@
+@use '../tokens' as *;
+
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.menu-button:hover {
+  opacity: 0.85;
+}
+
+.menu-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.menu-button__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* sizes */
+.menu-button--md {
+  width: 20px;
+  height: 20px;
+}
+
+.menu-button--md .menu-button__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.menu-button--xl {
+  width: 32px;
+  height: 32px;
+}
+
+.menu-button--xl .menu-button__icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* colors */
+.menu-button--brand {
+  color: #051c3b;
+}
+
+.menu-button--white {
+  color: #ffffff;
+}

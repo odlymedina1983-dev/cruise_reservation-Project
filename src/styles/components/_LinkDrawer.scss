@@ -1,0 +1,60 @@
+@use '../tokens' as *;
+
+.link-drawer {
+  width: 164px;
+  position: relative;
+}
+
+/* TRIGGER */
+.link-drawer__trigger {
+  height: 10px;
+  background: $color-bg-brand;
+  border-radius: 0 0 16px 16px;
+}
+
+/* PANEL */
+.link-drawer__panel {
+  background: $color-bg-brand;
+  border-radius: 0 0 16px 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  gap: 0px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition: all 0.25s ease;
+}
+
+/* LINKS */
+.link-drawer__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 42px;
+
+    font-family: $font-family-heading;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 130%;
+
+    color: $turquoise-500;
+}
+
+.link-drawer__link:hover {
+  background: $navy-200; // ← navy-200
+}
+
+/* OPEN STATE */
+.link-drawer.open {
+  .link-drawer__panel {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}

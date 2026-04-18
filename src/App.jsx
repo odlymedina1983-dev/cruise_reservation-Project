@@ -1,6 +1,10 @@
 import MainLayout from './layouts/MainLayout'
 import Container from './components/Container'
 import CTA from './components/CTA/CTA'
+import MenuButton from './components/MenuButton/MenuButton'
+import SocialBar from './components/SocialBar/SocialBar'
+import UserBar from './components/UserBar/UserBar'
+import LinkDrawer from './components/LinkDrawer/LinkDrawer'
 
 function App() {
 return (
@@ -31,6 +35,18 @@ return (
                   type="secondary"
                   icon="right"
                 />
+                <MenuButton size="md" color="brand" />
+                <MenuButton size="xl" color="white" />
+                <SocialBar size="mobile" color="white" />
+                <SocialBar size="mobile" color="brand" />
+                <SocialBar size="desktop" color="white" />
+                <SocialBar size="desktop" color="brand" />
+
+                <UserBar logged={false} />
+                <UserBar logged={true} username="username" />
+
+                <LinkDrawer isOpen={false} />
+                <LinkDrawer isOpen={true} />
               </Container>    
         </main>
     </MainLayout>
