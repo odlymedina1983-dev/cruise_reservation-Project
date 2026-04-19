@@ -1,0 +1,40 @@
+@use '../tokens' as *;
+
+.mobile-navbar {
+  position: relative;
+  width: 375px;
+}
+
+.mobile-navbar__bar {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  min-height: 50px;
+  padding: 10px 16px;
+  background: $color-bg-brand;
+  border-radius: 0 0 16px 16px;
+}
+
+.mobile-navbar__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 343px;
+  min-height: 24px;
+}
+
+.mobile-navbar__line {
+  display: block;
+  width: 343px;
+  height: 1px;
+  margin-top: 6px;
+  background: $color-state-error;
+}
+
+.mobile-navbar__drawer {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}

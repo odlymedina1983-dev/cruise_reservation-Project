@@ -5,13 +5,14 @@ import MenuButton from './components/MenuButton/MenuButton'
 import SocialBar from './components/SocialBar/SocialBar'
 import UserBar from './components/UserBar/UserBar'
 import LinkDrawer from './components/LinkDrawer/LinkDrawer'
+import NavBar_Mobile from './components/NavBar/NavBarMobile'
 
 function App() {
 return (
     <MainLayout> 
         <main>                
               <Container>
-                <h1>Cruiser Project-Fantasm</h1>
+                {/* <h1>Cruiser Project-Fantasm</h1>
                 <h2>Cruiser Project-Century</h2>
                 <h3>Cruiser Project-Inter</h3>
                 <CTA
@@ -46,7 +47,10 @@ return (
                 <UserBar logged={true} username="username" />
 
                 <LinkDrawer isOpen={false} />
-                <LinkDrawer isOpen={true} />
+                <LinkDrawer isOpen={true} /> */}
+                <NavBar_Mobile logged={false} />
+                <br />
+                <NavBar_Mobile logged={true} username="username" />
               </Container>    
         </main>
     </MainLayout>
