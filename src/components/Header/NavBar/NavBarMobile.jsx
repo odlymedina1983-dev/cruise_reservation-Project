@@ -4,7 +4,7 @@ import MenuButton from '../MenuButton/MenuButton'
 import UserBar from '../UserBar/UserBar'
 import LinkDrawer from '../LinkDrawer/LinkDrawer'
 
-function NavBar_Mobile({ logged = false, username = 'username' }) {
+function NavBarMobile({ logged = false, username = 'username' }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const handleToggleDrawer = () => {
@@ -39,4 +39,4 @@ function NavBar_Mobile({ logged = false, username = 'username' }) {
   )
 }
 
-export default NavBar_Mobile
+export default NavBarMobile

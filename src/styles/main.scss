@@ -1,11 +1,11 @@
 @use './tokens' as *;
 @use './reset';
 @use './components/CTA';
-@use './components/MenuButton';
-@use './components/SocialBar';
-@use './components/UserBar';
-@use './components/LinkDrawer';
-@use './components/NavBarMobile';
+@use './components/Header/MenuButton';
+@use './components/Header/SocialBar';
+@use './components/Header/UserBar';
+@use './components/Header/LinkDrawer';
+@use './components/Header/NavBarMobile';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 

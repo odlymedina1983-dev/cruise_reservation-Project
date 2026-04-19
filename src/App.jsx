@@ -1,11 +1,11 @@
 import MainLayout from './layouts/MainLayout'
 import Container from './components/Container'
 import CTA from './components/CTA/CTA'
-import MenuButton from './components/MenuButton/MenuButton'
-import SocialBar from './components/SocialBar/SocialBar'
-import UserBar from './components/UserBar/UserBar'
-import LinkDrawer from './components/LinkDrawer/LinkDrawer'
-import NavBar_Mobile from './components/NavBar/NavBarMobile'
+import MenuButton from "./components/Header/MenuButton/MenuButton";
+import SocialBar from "./components/Header/SocialBar/SocialBar";
+import UserBar from "./components/Header/UserBar/UserBar";
+import NavBarMobile from "./components/Header/NavBar/NavBarMobile";
+import LinkDrawer from "./components/Header/LinkDrawer/LinkDrawer";
 
 function App() {
 return (
@@ -48,9 +48,9 @@ return (
 
                 <LinkDrawer isOpen={false} />
                 <LinkDrawer isOpen={true} /> */}
-                <NavBar_Mobile logged={false} />
+                <NavBarMobile logged={false} />
                 <br />
-                <NavBar_Mobile logged={true} username="username" />
+                <NavBarMobile logged={true} username="username" />
               </Container>    
         </main>
     </MainLayout>
