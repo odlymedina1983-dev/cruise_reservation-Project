@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import SocialBar from '../SocialBar/SocialBar'
 import MenuButton from '../MenuButton/MenuButton'
 import UserBar from '../UserBar/UserBar'
@@ -6,10 +6,29 @@ import LinkDrawer from '../LinkDrawer/LinkDrawer'
 
 function NavBarMobile({ logged = false, username = 'username' }) {
   const [isOpen, setIsOpen] = useState(false)
+  const drawerRef = useRef(null)
 
   const handleToggleDrawer = () => {
     setIsOpen((prev) => !prev)
   }
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isOpen &&
+        drawerRef.current &&
+        !drawerRef.current.contains(event.target)
+      ) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isOpen])
 
   return (
     <nav className="mobile-navbar" aria-label="Mobile navigation">
@@ -31,7 +50,7 @@ function NavBarMobile({ logged = false, username = 'username' }) {
       </div>
 
       {isOpen && (
-        <div className="mobile-navbar__drawer">
+        <div className="mobile-navbar__drawer" ref={drawerRef}>
           <LinkDrawer isOpen={true} />
         </div>
       )}

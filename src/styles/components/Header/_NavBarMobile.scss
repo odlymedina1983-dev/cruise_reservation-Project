@@ -2,39 +2,45 @@
 
 .mobile-navbar {
   position: relative;
-  width: 375px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .mobile-navbar__bar {
   display: flex;
   flex-direction: column;
-  width: 375px;
+
+  width: 100%;
+  max-width: 375px; // 👈 aquí sí es válido
+
   min-height: 50px;
-  padding: 10px 16px;
+  padding: $spc-10 $spc-16;
+
   background: $color-bg-brand;
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 $radius-lg $radius-lg;
 }
 
 .mobile-navbar__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 343px;
-  min-height: 24px;
+  width: 100%;
 }
 
 .mobile-navbar__line {
-  display: block;
-  width: 343px;
+  width: 100%;
   height: 1px;
-  margin-top: 6px;
+  margin-top: $spc-6;
   background: $color-state-error;
 }
 
 .mobile-navbar__drawer {
   position: absolute;
-  top: 50px;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
+  max-width: 375px;
   z-index: 10;
 }
