@@ -1,0 +1,58 @@
+@use './tokens' as *;
+
+/* HEADINGS */
+
+h1,
+.text-h1 {
+  font-family: 'Fantasm-and-Secrets';
+  font-size: $font-size-56;
+  line-height: $line-height-h1;
+  letter-spacing: -0.01em;
+}
+
+h2,
+.text-h2 {
+  font-family: $font-family-heading;
+  font-size: $font-size-36;
+  line-height: $line-height-h2;
+  letter-spacing: -0.005em;
+}
+
+h3,
+.text-h3 {
+  font-family: $font-family-heading;
+  font-size: $font-size-20;
+  line-height: $line-height-body;
+}
+
+/* BODY */
+
+.text-body {
+  font-size: $font-size-16;
+  line-height: $line-height-body;
+}
+
+.text-small {
+  font-size: $font-size-14;
+  line-height: $line-height-small;
+}
+
+/* ACCENT */
+
+.text-accent-lg {
+  font-family: 'Fantasm-and-Secrets';
+  font-size: $font-size-48;
+  line-height: $line-height-accent-lg;
+}
+
+.text-accent-md {
+  font-family: 'Fantasm-and-Secrets';
+  font-size: $font-size-36;
+  line-height: $line-height-accent-md;
+}
+
+.text-accent-sm {
+  font-family: 'Fantasm-and-Secrets';
+  font-size: $font-size-24;
+  line-height: $line-height-accent-sm;
+}
