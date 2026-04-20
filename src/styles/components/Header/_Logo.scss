@@ -1,0 +1,22 @@
+@use '../../tokens' as *;
+
+
+.logo img {
+  display: block;
+  height: auto;
+  width: 163px; // MOBILE (Figma)
+}
+
+/* TABLET */
+@media (min-width: $bp-md) {
+  .logo img {
+    width: 250px; // ← como dijiste
+  }
+}
+
+/* DESKTOP */
+@media (min-width: $bp-lg) {
+  .logo img {
+    width: 250px; // mismo tamaño que tablet
+  }
+}

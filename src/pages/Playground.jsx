@@ -6,6 +6,8 @@ import SocialBar from "../components/Header/SocialBar/SocialBar";
 import UserBar from "../components/Header/UserBar/UserBar";
 import NavBarMobile from "../components/Header/NavBar/NavBarMobile";
 import LinkDrawer from "../components/Header/LinkDrawer/LinkDrawer";
+import SearchBar from '.././components/Header/SearchBar/SearchBar';
+import Header from '../components/Header/Header';
 
 function Playground() {
 return (
@@ -48,10 +50,20 @@ return (
 
                 <LinkDrawer isOpen={false} />
                 <LinkDrawer isOpen={true} /> */}
-                <NavBarMobile logged={false} />
+                {/* <NavBarMobile logged={false} /> */}
                 {/* <br />
                 <NavBarMobile logged={true} username="username" /> */}
-              </Container>    
+                {/* <SearchBar size="sm" />
+                <SearchBar size="sm" initialValue="Miami Cruises" />
+
+                <SearchBar size="lg" />
+                <SearchBar size="lg" initialValue="Miami Cruises" /> */}
+                {/* <SearchBar  size="lg"
+                  onSearch={(value) => console.log('search:', value)}
+                /> */}
+                <Header/> 
+              </Container> 
+                
         </main>
     </MainLayout>
   )

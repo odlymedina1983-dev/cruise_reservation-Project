@@ -8,6 +8,8 @@
 @use './components/Header/NavBarMobile';
 @use './Container';
 @use './typography';
+@use './components/Header/SearchBar';
+@use './components/Header/Header';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 

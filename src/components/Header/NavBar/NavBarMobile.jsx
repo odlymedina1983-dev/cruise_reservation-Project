@@ -6,27 +6,29 @@ import LinkDrawer from '../LinkDrawer/LinkDrawer'
 
 function NavBarMobile({ logged = false, username = 'username' }) {
   const [isOpen, setIsOpen] = useState(false)
+
   const drawerRef = useRef(null)
+  const buttonRef = useRef(null)
 
   const handleToggleDrawer = () => {
     setIsOpen((prev) => !prev)
   }
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        isOpen &&
-        drawerRef.current &&
-        !drawerRef.current.contains(event.target)
-      ) {
+    const handleClick = (event) => {
+      // si clickeas el botón → NO hacer nada aquí
+      if (buttonRef.current?.contains(event.target)) return
+
+      // cualquier otro click → cerrar
+      if (isOpen) {
         setIsOpen(false)
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('click', handleClick)
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('click', handleClick)
     }
   }, [isOpen])
 
@@ -36,12 +38,14 @@ function NavBarMobile({ logged = false, username = 'username' }) {
         <div className="mobile-navbar__content">
           <SocialBar size="mobile" color="white" />
 
-          <MenuButton
-            size="xl"
-            color="white"
-            ariaLabel={isOpen ? 'Close menu' : 'Open menu'}
-            onClick={handleToggleDrawer}
-          />
+          <div ref={buttonRef}>
+            <MenuButton
+              size="xl"
+              color="white"
+              ariaLabel={isOpen ? 'Close menu' : 'Open menu'}
+              onClick={handleToggleDrawer}
+            />
+          </div>
 
           <UserBar logged={logged} username={username} />
         </div>
