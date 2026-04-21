@@ -10,6 +10,7 @@
 @use './typography';
 @use './components/Header/SearchBar';
 @use './components/Header/Header';
+@use './components/Hero/Hero';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -33,6 +34,11 @@ body {
   font-family: $font-family-body;
   font-size: 16px;
   line-height: 26px;
+
+  background-image: url('../assets/hero-images/hero_mobile_wonder-of-the-seas-aft-dome-sunset-night.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
 }
 
 #root {
@@ -64,6 +70,12 @@ h3 {
 
 .section {
   margin-top: $spc-16;
+}
+
+@media (min-width: $bp-md) {
+  body {
+    background-image: none;
+  }
 }
 
 @media (min-width: $bp-lg) {

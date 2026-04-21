@@ -8,6 +8,7 @@ import NavBarMobile from "../components/Header/NavBar/NavBarMobile";
 import LinkDrawer from "../components/Header/LinkDrawer/LinkDrawer";
 import SearchBar from '.././components/Header/SearchBar/SearchBar';
 import Header from '../components/Header/Header';
+import Hero from '../components/Hero/Hero.jsx'
 
 function Playground() {
 return (
@@ -62,6 +63,7 @@ return (
                   onSearch={(value) => console.log('search:', value)}
                 /> */}
                 <Header/> 
+                <Hero/>
               </Container> 
                 
         </main>

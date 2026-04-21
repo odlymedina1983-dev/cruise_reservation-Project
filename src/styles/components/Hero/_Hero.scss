@@ -1,0 +1,47 @@
+@use '../../tokens' as *;
+
+.hero {
+  position: relative;
+  z-index: 1;
+  padding-top: $spc-8;
+  padding-bottom: $spc-24;
+}
+
+.hero__content {
+  position: relative;
+  min-height: 640px;
+}
+
+@media (min-width: $bp-md) {
+  .hero {
+    padding-top: $spc-24;
+    padding-bottom: $spc-32;
+  }
+
+  .hero__content {
+    min-height: 508px;
+    padding: $spc-32;
+    border-radius: $radius-xl;
+    background-image: url('../../../assets/hero-images/hero_tablet_icon-of-the-seas.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: $bp-lg) {
+  .hero {
+    padding-top: $spc-32;
+    padding-bottom: $spc-32;
+  }
+
+  .hero__content {
+    min-height: 508px;
+    padding: $spc-32;
+    border-radius: $radius-xl;
+    background-image: url('../../../assets/hero-images/hero_tablet_icon-of-the-seas.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

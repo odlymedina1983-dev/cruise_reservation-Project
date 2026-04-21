@@ -3,6 +3,8 @@
 .site-header {
   width: 100vw;
   margin-left: calc(50% - 50vw);
+   position: relative;
+  z-index: 10;
 }
 
 /* MOBILE */
