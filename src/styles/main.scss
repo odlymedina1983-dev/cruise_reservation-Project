@@ -11,6 +11,10 @@
 @use './components/Header/SearchBar';
 @use './components/Header/Header';
 @use './components/Hero/Hero';
+@use './components/Hero/Departure';
+@use './components/Hero/CruiseLine';
+@use './components/Hero/Price';
+@use './components/Hero/KanowaScore';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 

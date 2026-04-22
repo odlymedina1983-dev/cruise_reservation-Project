@@ -9,6 +9,10 @@ import LinkDrawer from "../components/Header/LinkDrawer/LinkDrawer";
 import SearchBar from '.././components/Header/SearchBar/SearchBar';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero.jsx'
+import Departure from '../components/Hero/Departure.jsx'
+import CruiseLine from '../components/Hero/CruiseLine.jsx'
+import Price from '../components/Hero/Price.jsx'
+import KanowaScore from '../components/Hero/KanowaScore.jsx'
 
 function Playground() {
 return (
@@ -63,7 +67,20 @@ return (
                   onSearch={(value) => console.log('search:', value)}
                 /> */}
                 <Header/> 
-                <Hero/>
+                
+                {/* <Hero/> */}
+                <div style={{ padding: "40px" }}>
+                  <Departure />
+                </div>
+                <div style={{ padding: "40px" }}>
+                  <CruiseLine />
+                </div>
+                <div style={{ padding: "40px" }}>
+                  <Price />
+                </div>
+                <div style={{ padding: "40px" }}>
+                  <KanowaScore />
+                </div>
               </Container> 
                 
         </main>
