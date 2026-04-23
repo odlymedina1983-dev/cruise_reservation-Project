@@ -13,6 +13,10 @@ import Departure from '../components/Hero/Departure.jsx'
 import CruiseLine from '../components/Hero/CruiseLine.jsx'
 import Price from '../components/Hero/Price.jsx'
 import KanowaScore from '../components/Hero/KanowaScore.jsx'
+import YearSelect from '../components/Hero/YearSelect.jsx';
+import MonthSelect from '../components/Hero/MonthSelect.jsx';
+import DaySelect from '../components/Hero/DaySelect.jsx';
+import DateSelect from '../components/Hero/DateSelect.jsx';
 
 function Playground() {
 return (
@@ -69,7 +73,7 @@ return (
                 <Header/> 
                 
                 {/* <Hero/> */}
-                <div style={{ padding: "40px" }}>
+                {/* <div style={{ padding: "40px" }}>
                   <Departure />
                 </div>
                 <div style={{ padding: "40px" }}>
@@ -80,7 +84,9 @@ return (
                 </div>
                 <div style={{ padding: "40px" }}>
                   <KanowaScore />
-                </div>
+                </div> */}
+                {/* <YearSelect/><MonthSelect/><DaySelect/> */}
+                <DateSelect/>
               </Container> 
                 
         </main>

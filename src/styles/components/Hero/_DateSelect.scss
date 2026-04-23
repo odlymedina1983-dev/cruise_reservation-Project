@@ -1,0 +1,13 @@
+@use "../../tokens" as *;
+
+.date-select {
+  position: relative;
+  width: 241px;
+  min-height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spc-10;
+  padding: $spc-4 0;
+  background-color: $color-bg-brand;
+}

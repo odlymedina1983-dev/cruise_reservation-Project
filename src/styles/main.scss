@@ -15,6 +15,10 @@
 @use './components/Hero/CruiseLine';
 @use './components/Hero/Price';
 @use './components/Hero/KanowaScore';
+@use './components/Hero/YearSelect';
+@use './components/Hero/MonthSelect';
+@use './components/Hero/DaySelect';
+@use './components/Hero/DateSelect';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
