@@ -17,6 +17,8 @@ import YearSelect from '../components/Hero/YearSelect.jsx';
 import MonthSelect from '../components/Hero/MonthSelect.jsx';
 import DaySelect from '../components/Hero/DaySelect.jsx';
 import DateSelect from '../components/Hero/DateSelect.jsx';
+import DateInput from '../components/Hero/DateInput.jsx';
+import SearchEngine from '../components/Hero/SearchEngine.jsx';
 
 function Playground() {
 return (
@@ -72,7 +74,7 @@ return (
                 /> */}
                 <Header/> 
                 
-                {/* <Hero/> */}
+                <Hero/>
                 {/* <div style={{ padding: "40px" }}>
                   <Departure />
                 </div>
@@ -86,7 +88,8 @@ return (
                   <KanowaScore />
                 </div> */}
                 {/* <YearSelect/><MonthSelect/><DaySelect/> */}
-                <DateSelect/>
+                {/* <DateSelect/> */}
+                {/* <DateInput/> */}
               </Container> 
                 
         </main>

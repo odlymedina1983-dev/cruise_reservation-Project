@@ -4,20 +4,19 @@ import YearSelect from "./YearSelect";
 import MonthSelect from "./MonthSelect";
 import DaySelect from "./DaySelect";
 
-function DateSelect() {
-  const today = new Date();
-
+function DateSelect({ value, onChange, onClose }) {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [selectedYear, setSelectedYear] = useState(today.getFullYear());
-  const [selectedMonth, setSelectedMonth] = useState(today.getMonth());
-  const [selectedDay, setSelectedDay] = useState(today.getDate());
-
   const rootRef = useRef(null);
+
+  const selectedYear = value.year;
+  const selectedMonth = value.month;
+  const selectedDay = value.day;
 
   useEffect(() => {
     const handlePointerDown = (event) => {
       if (!rootRef.current?.contains(event.target)) {
         setOpenDropdown(null);
+        onClose();
       }
     };
 
@@ -28,33 +27,47 @@ function DateSelect() {
       document.removeEventListener("mousedown", handlePointerDown);
       document.removeEventListener("touchstart", handlePointerDown);
     };
-  }, []);
+  }, [onClose]);
 
   useEffect(() => {
     const daysInMonth = new Date(selectedYear, selectedMonth + 1, 0).getDate();
 
     if (selectedDay > daysInMonth) {
-      setSelectedDay(daysInMonth);
+      onChange({
+        year: selectedYear,
+        month: selectedMonth,
+        day: daysInMonth,
+      });
     }
-  }, [selectedYear, selectedMonth, selectedDay]);
+  }, [selectedYear, selectedMonth, selectedDay, onChange]);
 
   const handleToggle = (dropdownName) => {
     setOpenDropdown((prev) => (prev === dropdownName ? null : dropdownName));
   };
 
   const handleSelectYear = (year) => {
-    setSelectedYear(year);
+    onChange({
+      ...value,
+      year,
+    });
     setOpenDropdown(null);
   };
 
   const handleSelectMonth = (month) => {
-    setSelectedMonth(month);
+    onChange({
+      ...value,
+      month,
+    });
     setOpenDropdown(null);
   };
 
   const handleSelectDay = (day) => {
-    setSelectedDay(day);
+    onChange({
+      ...value,
+      day,
+    });
     setOpenDropdown(null);
+    onClose();
   };
 
   return (
@@ -80,7 +93,7 @@ function DateSelect() {
         isOpen={openDropdown === "day"}
         onToggle={() => handleToggle("day")}
         onSelect={handleSelectDay}
-     />
+      />
     </div>
   );
 }
